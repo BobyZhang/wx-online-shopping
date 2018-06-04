@@ -1,0 +1,17 @@
+<view class="container">
+  <scroll-view class="topic-list" scroll-y="true" scroll-top="{{scrollTop}}">
+    <!-- what wx:key for? UNRESOLVED -->
+    <navigator class="item" wx:for="{{topicList}}" wx:key="{{item.id}}" url="../topicDetail/topicDetail?id={{item.id}}">
+      <image class="img" src="{{item.scene_pic_url}}"></image>
+      <view class="info">
+        <text class="title">{{item.title}}</text>
+        <text class="desc">{{item.subtitle}}</text>
+        <text class="price">From ${{item.price_info}}</text>
+      </view>
+    </navigator>
+    <view class="page" wx:if="{{showPage}}">
+      <view class="prev {{ page <= 1 ? 'disabled' : '' }}" bindtap="prevPage">Prev</view>
+      <view class="next {{ (count / size) < page + 1 ? 'disabled' : ''}}" bindtap="nextPage">Next</view>
+    </view>
+  </scroll-view>
+</view>
