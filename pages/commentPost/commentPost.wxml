@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="post-comment">
+    <view class="input-box">
+      <textarea class="content" focus="true" bindinput="bindInputValue" maxlength="140" placeholder="When comment has been filtered, it's available for all users"></textarea>
+      <text class="count">{{140 - content.length}}</text>
+    </view>
+    <view class="btns">
+      <view class="close" bindtap="onClose">Cancel</view>
+      <view class="post" bindtap="onPost">Post</view>
+    </view>
+  </view>
+</view>

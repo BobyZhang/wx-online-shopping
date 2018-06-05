@@ -2,7 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/catalog/catalog",
+
     "pages/topic/topic",
+    "pages/topicDetail/topicDetail",
+    "pages/topicComment/topicComment",
+
+    "pages/commentPost/commentPost",
+
     "pages/cart/cart",
     "pages/ucenter/index/index"
 
